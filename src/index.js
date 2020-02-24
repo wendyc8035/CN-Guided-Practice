@@ -2,9 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import fetchGIF from "./fetch-gif";
 
-let apiKey = ""; // <-- add the API key from your slides
+let apiKey = "eCLr0aYcPt2PJvPUPgcqR5PZP9eRd8HC"; // <-- add the API key from your slides
 
-let searchTerm = ""; // <-- add a search term
+let searchTerm = "dogs"; // <-- add a search term
 
 class App extends React.Component {
   constructor() {
@@ -22,7 +22,7 @@ class App extends React.Component {
 
   render() {
     if (this.state.imageUrl || !apiKey || !searchTerm) {
-      return <Giphy data={this.state.imageUrl} />;
+      return <Giphy data = {this.state.imageUrl} />;
     } else {
       return null;
     }
@@ -32,19 +32,19 @@ class App extends React.Component {
 /**
  * This is the component where your data will flow to.
  * Send the data down from the parent App component!
- */
-function Giphy() {
-  return <div>Where's my data? :(</div>;
-}
+ * 
+function Giphy() {}
+*/
 
-/*
 class Giphy extends React.Component {
   render() {
     return (
-     <div>Where's my data? :(</div>;
+      <div>
+      <img src = {this.props.data} />
+      </div>
     );
   }
 }
-*/
+
 
 ReactDOM.render(<App />, document.getElementById("root"));
